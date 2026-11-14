@@ -190,6 +190,50 @@ body {
 .colbox h3 .ic { width: 34px; height: 34px; border-radius: 10px; margin-right: 0.6rem; vertical-align: -9px; }
 .colbox h3 .ic svg { width: 18px; height: 18px; }
 
+/* ---------- Hub animado (red/comunidad) ---------- */
+
+.hub { width: clamp(110px, 13vw, 150px); height: auto; overflow: visible; }
+.hub-spokes line {
+  stroke: var(--green);
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-dasharray: 3 7;
+  animation: spokeflow 1.6s linear infinite;
+}
+.hub-spokes line:nth-child(2n) { animation-delay: -0.4s; }
+.hub-spokes line:nth-child(3n) { animation-delay: -0.8s; }
+.hub-center { fill: var(--green); }
+.hub-pulse {
+  fill: none;
+  stroke: var(--green);
+  stroke-width: 1.6;
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: hubpulse 2.4s ease-out infinite;
+}
+.hub-nodes circle {
+  fill: var(--green);
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: nodepop 2.4s ease-in-out infinite;
+}
+.hub-nodes circle:nth-child(2) { animation-delay: 0.3s; }
+.hub-nodes circle:nth-child(3) { animation-delay: 0.6s; }
+.hub-nodes circle:nth-child(4) { animation-delay: 0.9s; }
+.hub-nodes circle:nth-child(5) { animation-delay: 1.2s; }
+.hub-nodes circle:nth-child(6) { animation-delay: 1.5s; }
+.hub-nodes circle:nth-child(7) { animation-delay: 1.8s; }
+.hub-nodes circle:nth-child(8) { animation-delay: 2.1s; }
+@keyframes spokeflow { to { stroke-dashoffset: -10; } }
+@keyframes hubpulse {
+  0% { transform: scale(0.6); opacity: 0.9; }
+  100% { transform: scale(3.4); opacity: 0; }
+}
+@keyframes nodepop {
+  0%, 100% { transform: scale(1); opacity: 0.85; }
+  50% { transform: scale(1.35); opacity: 1; }
+}
+
 /* ---------- Lists ---------- */
 
 .dots { list-style: none; display: flex; flex-direction: column; gap: 0.7rem; }
@@ -426,5 +470,5 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { transition: none; opacity: 1; transform: none; }
-  .bar span, .sparkle, .ripple-path { transition: none; animation: none; }
+  .bar span, .sparkle, .ripple-path, .hub-spokes line, .hub-pulse, .hub-nodes circle { transition: none; animation: none; }
 }
