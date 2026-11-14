@@ -429,19 +429,24 @@
           <line x1="134" y1="86" x2="92" y2="104"/><line x1="92" y1="104" x2="50" y2="100"/>
           <line x1="50" y1="100" x2="12" y2="68"/><line x1="12" y1="68" x2="18" y2="32"/>
           <line x1="18" y1="32" x2="36" y2="56"/><line x1="36" y1="56" x2="12" y2="68"/>
-          <line x1="36" y1="56" x2="78" y2="52"/><line x1="36" y1="56" x2="50" y2="100"/>
-          <line x1="78" y1="52" x2="58" y2="14"/><line x1="78" y1="52" x2="102" y2="18"/>
-          <line x1="78" y1="52" x2="92" y2="104"/><line x1="78" y1="52" x2="134" y2="86"/>
+          <line x1="36" y1="56" x2="78" y2="52"/><line x1="36" y1="56" x2="60" y2="82"/>
+          <line x1="36" y1="56" x2="50" y2="100"/><line x1="12" y1="68" x2="24" y2="92"/>
+          <line x1="24" y1="92" x2="50" y2="100"/><line x1="78" y1="52" x2="58" y2="14"/>
+          <line x1="78" y1="52" x2="96" y2="36"/><line x1="78" y1="52" x2="112" y2="58"/>
+          <line x1="78" y1="52" x2="60" y2="82"/><line x1="78" y1="52" x2="92" y2="104"/>
+          <line x1="78" y1="52" x2="134" y2="86"/><line x1="96" y1="36" x2="58" y2="14"/>
+          <line x1="96" y1="36" x2="102" y2="18"/><line x1="96" y1="36" x2="112" y2="58"/>
+          <line x1="112" y1="58" x2="102" y2="18"/><line x1="112" y1="58" x2="142" y2="42"/>
+          <line x1="112" y1="58" x2="134" y2="86"/><line x1="60" y1="82" x2="50" y2="100"/>
+          <line x1="60" y1="82" x2="92" y2="104"/>
         </g>
         <g class="mesh-nodes">
           <circle cx="18" cy="32" r="5"/><circle cx="58" cy="14" r="5"/><circle cx="102" cy="18" r="5"/>
           <circle cx="142" cy="42" r="5"/><circle cx="134" cy="86" r="5"/><circle cx="92" cy="104" r="5"/>
-          <circle cx="50" cy="100" r="5"/><circle cx="12" cy="68" r="5"/>
-          <circle cx="78" cy="52" r="6.5"/><circle cx="36" cy="56" r="5.5"/>
+          <circle cx="50" cy="100" r="5"/><circle cx="12" cy="68" r="5"/><circle cx="24" cy="92" r="4.5"/>
+          <circle cx="36" cy="56" r="5.5"/><circle cx="78" cy="52" r="6"/><circle cx="112" cy="58" r="5"/>
+          <circle cx="60" cy="82" r="5"/><circle cx="96" cy="36" r="5"/>
         </g>
-        <circle class="mesh-traveler" r="3"><animateMotion dur="4s" repeatCount="indefinite" path="M18 32 L78 52 L92 104"/></circle>
-        <circle class="mesh-traveler" r="3"><animateMotion dur="5.5s" begin="1.4s" repeatCount="indefinite" path="M102 18 L78 52 L36 56"/></circle>
-        <circle class="mesh-traveler" r="3"><animateMotion dur="6.5s" begin="2.6s" repeatCount="indefinite" path="M142 42 L134 86 L92 104"/></circle>
       </svg>
       <p class="paragraph reveal">En muchas comunidades encontré red, pero más allá del nombre de cada una, fueron <em>las personas</em> que estaban ahí, que hasta el día de hoy conservo.</p>
     </div>
@@ -669,22 +674,6 @@
     </div>
   </section>
 
-  <!-- 46 · Aplausos forman el logo -->
-  <section class="slide slide--dark" id="s46">
-    <canvas class="applause-canvas" id="applauseCanvas" aria-hidden="true"></canvas>
-    <div class="inner inner--center inner--top">
-      <p class="kicker kicker--light reveal">Gracias, 9punto5</p>
-      <h2 class="statement reveal">Aquí empezó todo.</h2>
-      <h2 class="statement reveal">Gracias por el <em>escenario</em>.</h2>
-      <div class="applause-ui reveal">
-        <button class="abtn" id="apMic" type="button">Activar micrófono</button>
-        <button class="abtn abtn--ghost" id="apSim" type="button">Simular aplausos</button>
-        <span class="ap-meter"><i id="apMeter"></i></span>
-        <span class="ap-status" id="apStatus">El aplauso de la sala dibuja el logo.</span>
-      </div>
-    </div>
-  </section>
-
   <!-- 47 -->
   <section class="slide" id="s47">
     <div class="inner">
@@ -740,8 +729,24 @@
     </div>
   </section>
 
-  <!-- 51 -->
-  <section class="slide slide--dark" data-decor id="s51">
+  <!-- 51 · Aplausos forman el logo -->
+  <section class="slide slide--dark" id="s51">
+    <canvas class="applause-canvas" id="applauseCanvas" aria-hidden="true"></canvas>
+    <div class="inner inner--center inner--top">
+      <p class="kicker kicker--light reveal">Gracias, 9punto5</p>
+      <h2 class="statement reveal">Aquí empezó todo.</h2>
+      <h2 class="statement reveal">Gracias por el <em>escenario</em>.</h2>
+      <div class="applause-ui reveal">
+        <button class="abtn" id="apMic" type="button">Activar micrófono</button>
+        <button class="abtn abtn--ghost" id="apSim" type="button">Simular aplausos</button>
+        <span class="ap-meter"><i id="apMeter"></i></span>
+        <span class="ap-status" id="apStatus">El aplauso de la sala dibuja el logo.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- 52 -->
+  <section class="slide slide--dark" data-decor id="s52">
     <div class="inner inner--split">
       <div class="col">
         <p class="kicker kicker--light reveal">Sigamos conversando</p>

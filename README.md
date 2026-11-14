@@ -34,9 +34,9 @@ Minimalista con variantes por lámina: crema, tintas rosa (`slide--blush`) y ver
 ## Piezas interactivas
 
 - **Lámina 19, efecto mariposa:** ripple SVG animado, un punto verde emite anillos que viajan por un camino punteado hacia anillos enormes.
-- **Lámina 30, comunidades:** malla descentralizada animada, nodos conectados entre sí con pulsos que viajan por las conexiones.
-- **Lámina 46, Gracias 9punto5:** `applause.js`, partículas que forman el logo de 9punto5 con la energía del aplauso. Adaptado del sketch de *Infinite Patterns in the Digital Canvas* (JSNation) a canvas vanilla. Micrófono real vía Web Audio, botón de aplausos simulados, o tocar la lámina. El logo se muestrea por píxeles desde `assets/9punto5-logo.svg`.
-- **Lámina 51:** QR a https://frani.be/ en `assets/qr-frani.svg` (regenerable con `qrcode` de Python).
+- **Lámina 30, comunidades:** malla descentralizada animada, 14 nodos conectados entre sí sin centro.
+- **Lámina 51, Gracias 9punto5:** `applause.js`, partículas que forman el logo de 9punto5 con la energía del aplauso. Adaptado del sketch de *Infinite Patterns in the Digital Canvas* (JSNation) a canvas vanilla. Micrófono real vía Web Audio, botón de aplausos simulados, o tocar la lámina. El logo se muestrea por píxeles desde `assets/9punto5-logo.svg`.
+- **Lámina 52 (final):** QR a https://frani.be/ en `assets/qr-frani.svg` (regenerable con `qrcode` de Python).
 
 ## Imágenes
 
