@@ -458,13 +458,12 @@ body {
 
 /* ---------- Aplausos -> logo (slide 46) ---------- */
 
-.applause-canvas {
+.applause-art {
   position: absolute;
   inset: 0;
   z-index: 1;
-  width: 100%;
-  height: 100%;
 }
+.applause-art canvas { display: block; }
 .inner--top { justify-content: flex-start; padding-top: 9vh; }
 .applause-ui {
   display: flex;
