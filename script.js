@@ -5,32 +5,66 @@ const counterCurrent = document.getElementById("counterCurrent");
 
 document.getElementById("counterTotal").textContent = String(slides.length).padStart(2, "0");
 
-/* ---------- Assets: carga foto/video si existe, placeholder si no ---------- */
+/* ---------- Decoración: ondas suaves en slides oscuras ---------- */
 
-function loadAsset(slot) {
-  const src = slot.dataset.src;
-  if (slot.dataset.type === "video") {
-    const v = document.createElement("video");
-    v.muted = true;
-    v.loop = true;
-    v.playsInline = true;
-    v.controls = true;
-    v.preload = "metadata";
-    v.src = src;
-    v.addEventListener("loadeddata", () => {
-      slot.classList.add("asset--loaded");
-      slot.prepend(v);
-    });
-    v.addEventListener("error", () => v.remove());
-    return;
-  }
-  const img = new Image();
-  img.alt = slot.dataset.label || "";
-  img.onload = () => {
-    slot.classList.add("asset--loaded");
-    slot.prepend(img);
+const WAVE_PATHS = [
+  "M0,660 C220,590 420,700 720,640 C1020,580 1220,680 1440,620 L1440,900 L0,900 Z",
+  "M0,760 C280,710 520,790 840,750 C1120,716 1300,780 1440,740 L1440,900 L0,900 Z",
+];
+
+function buildWaves(slide) {
+  const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+  svg.setAttribute("viewBox", "0 0 1440 900");
+  svg.setAttribute("preserveAspectRatio", "none");
+  svg.classList.add("waves");
+  WAVE_PATHS.forEach((d, i) => {
+    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    p.setAttribute("d", d);
+    p.setAttribute("fill", ["rgba(212,137,172,0.14)", "rgba(95,150,120,0.10)"][i]);
+    svg.appendChild(p);
+  });
+  slide.prepend(svg);
+}
+
+/* ---------- Sparkles mínimos ---------- */
+
+const SPARKLE_PATH = "M12 2 C13 8 16 11 22 12 C16 13 13 16 12 22 C11 16 8 13 2 12 C8 11 11 8 12 2 Z";
+
+function sparkleColor(slide) {
+  if (slide.classList.contains("slide--dark")) return "rgba(255,250,247,0.8)";
+  if (slide.classList.contains("slide--blush")) return "rgba(212,137,172,0.55)";
+  if (slide.classList.contains("slide--sage")) return "rgba(95,150,120,0.5)";
+  return "rgba(162,91,130,0.4)";
+}
+
+function seededRandom(seed) {
+  let s = seed;
+  return () => {
+    s = (s * 9301 + 49297) % 233280;
+    return s / 233280;
   };
-  img.src = src;
+}
+
+function buildSparkles(slide, index) {
+  const count = slide.dataset.decor !== undefined ? 14 : parseInt(slide.dataset.sparkles || "0", 10);
+  if (!count) return;
+  const rand = seededRandom(index * 137 + 42);
+  for (let i = 0; i < count; i++) {
+    const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+    svg.setAttribute("viewBox", "0 0 24 24");
+    svg.classList.add("sparkle");
+    const size = 5 + rand() * 13;
+    svg.style.width = `${size}px`;
+    svg.style.height = `${size}px`;
+    svg.style.left = `${4 + rand() * 92}%`;
+    svg.style.top = `${4 + rand() * 88}%`;
+    svg.style.animationDelay = `${rand() * 3.6}s`;
+    const p = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    p.setAttribute("d", SPARKLE_PATH);
+    p.setAttribute("fill", sparkleColor(slide));
+    svg.appendChild(p);
+    slide.appendChild(svg);
+  }
 }
 
 /* ---------- Reveal + progreso ---------- */
@@ -51,8 +85,9 @@ const observer = new IntersectionObserver(
   { root: story, threshold: 0.55 }
 );
 
-slides.forEach((slide) => {
-  slide.querySelectorAll(".asset").forEach(loadAsset);
+slides.forEach((slide, i) => {
+  if (slide.dataset.decor !== undefined) buildWaves(slide);
+  buildSparkles(slide, i);
   observer.observe(slide);
 });
 

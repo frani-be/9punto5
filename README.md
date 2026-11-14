@@ -24,31 +24,20 @@ y abrir http://localhost:8080
 
 - Scroll o gesto: avanza lámina por lámina (snap).
 - Flechas ↑ ↓ ← →, espacio, PageUp/PageDown: anterior/siguiente.
-- Barra verde a la izquierda: progreso. Contador abajo a la izquierda.
+- Barra a la izquierda: progreso. Contador abajo a la izquierda.
 
 ## Estética
 
-Minimalista: fondo crema, tinta ciruela, kickers malva, acento verde (guiño a la impostora de *Abraza a tu impostora*). Divisores de acto (01, 02, 03, 05) en ciruela oscuro con numeral fantasma. Fuentes: Poppins y Quicksand.
+Minimalista con variantes por lámina: fondo crema, tinta ciruela, kickers malva espaciados, acento verde (guiño a la impostora). Tintes rosa (`slide--blush`) en las láminas emotivas y verde suave (`slide--sage`) en comunidad y cierre. Divisores en ciruela oscuro con ondas y destellos sutiles. Cards con iconos de línea, timeline, doble columna, comilla gigante, líneas en escalera y un ripple animado que representa el efecto mariposa en la lámina 19. QR a frani.be en la lámina final.
 
-## Assets pendientes
+Fuentes: Poppins y Quicksand.
 
-Los espacios punteados son placeholders: suelta el archivo con el nombre exacto y aparece al recargar.
+## Imágenes
 
-| Archivo | Lámina | Estado |
-|---|---|---|
-| `assets/img/nina.jpg` | 03, niña extraña | listo |
-| `assets/img/2023-antes-del-escenario.jpg` | 07, divisor Valdivia | listo |
-| `assets/img/abrazos.jpg` | 16, los abrazos al bajar | pendiente |
-| `assets/img/2023-escenario.jpg` | 22, timeline 2023 | pendiente |
-| `assets/img/budapest.jpg` | 22, timeline 2024 | listo |
-| `assets/img/impostora.jpg` | 22, timeline 2025 | pendiente |
-| `assets/img/2026-9punto5.jpg` | 22, timeline 2026 | pendiente (opcional) |
-| `assets/img/comunidad.jpeg` | 30, comunidades | listo |
-| `assets/img/jsconf-chile.jpg` | 47, card Escenarios | listo |
-| `assets/img/frani.jpg` | 47, retrato | pendiente |
+Por ahora todas las láminas van sin fotos, para probar el diseño. Cuando quieras reincorporarlas, los assets ya están en `assets/img/` (nina, comunidad, budapest, jsconf-chile, 2023-antes-del-escenario) y se puede reactivar el loader de `script.js` con slots `.asset`.
 
-Opcional: un video de la charla 2023 (`assets/video/2023-charla.mp4`) podría ir en la lámina 11 o 16.
+`assets/qr-frani.svg` es el QR generado a https://frani.be/ (se recrea con `qrcode` de Python si cambia la URL).
 
 ## Editar
 
-Todo el copy vive en `index.html`. Los temas son `class="slide"` (claro) y `slide--dark` (divisores y cierres).
+Todo el copy vive en `index.html`. Clases útiles: `slide--dark`, `slide--blush`, `slide--sage`, `inner--center`, `inner--split`, `statement`, `step`/`step--far` (escalera), `cards--N`, `em` para acento verde, `data-decor` (ondas+destellos), `data-sparkles="n"`.
