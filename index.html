@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Volver a subirse al escenario · frani.be · 9punto5</title>
-<meta name="description" content="Una historia sobre hablar desde la vulnerabilidad: de Valdivia 2023 a volver al escenario de 9punto5.">
+<title>Volver a subirse al escenario · frani.be · 9punto5 2026</title>
+<meta name="description" content="Lo que 9punto5 me devolvió y lo que aprendí de soltar. Una charla de Francisca Medina.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;600;700;800&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -12,189 +12,590 @@
 </head>
 <body>
 
-<nav class="progress" aria-label="Progreso de la historia"></nav>
-<div class="counter" aria-hidden="true"><span id="counterCurrent">01</span><span class="counter-sep">/</span><span id="counterTotal">11</span></div>
+<div class="bar" aria-hidden="true"><span id="barFill"></span></div>
+<div class="counter" aria-hidden="true"><span id="counterCurrent">01</span><span class="counter-sep">/</span><span id="counterTotal">51</span></div>
 
 <main id="story">
 
-  <!-- 0 · PORTADA -->
-  <section class="slide slide--night" data-waves="night" data-sparkles="18" id="portada">
-    <header class="brand brand--center"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner">
-      <h1 class="title title--hero reveal">Volver a subirse<br>al escenario</h1>
-      <p class="subtitle reveal">Lo que 9punto5 me devolvió y lo que aprendí de soltar</p>
-      <figure class="illustration illustration--girl-star reveal" aria-hidden="true">
-        <svg viewBox="0 0 320 200" class="art-girl-star">
-          <path class="star-big" d="M238 22 C241 36 248 43 262 46 C248 49 241 56 238 70 C235 56 228 49 214 46 C228 43 235 36 238 22 Z"/>
-          <g class="girl">
-            <path class="girl-hair" d="M118 96 C110 62 132 48 152 50 C176 52 190 70 184 100 C180 122 186 132 178 140 C160 152 128 148 118 132 C112 122 122 116 118 96 Z"/>
-            <circle class="girl-face" cx="152" cy="82" r="20"/>
-            <path class="girl-dress" d="M128 116 C138 108 166 108 176 116 L186 168 C160 178 138 178 116 168 Z"/>
-            <path class="girl-arm" d="M126 122 C114 130 108 142 106 154"/>
-            <path class="girl-arm" d="M178 122 C190 130 196 142 198 154"/>
-            <rect class="girl-leg" x="140" y="168" width="8" height="20" rx="4"/>
-            <rect class="girl-leg" x="156" y="168" width="8" height="20" rx="4"/>
-          </g>
-        </svg>
-      </figure>
-      <p class="hint reveal">Desliza o usa las flechas ↓</p>
+  <!-- 01 · Portada -->
+  <section class="slide slide--dark" id="s01">
+    <div class="inner">
+      <p class="kicker kicker--light reveal">9punto5 · 2026</p>
+      <h1 class="display reveal">Volver a subirse<br>al <em>escenario</em></h1>
+      <p class="lead reveal">Lo que 9punto5 me devolvió y lo que aprendí de soltar</p>
+      <p class="meta reveal">Francisca Medina · frani.be</p>
     </div>
   </section>
 
-  <!-- 1 · 9PUNTO5 2023: ANTES DE SUBIR -->
-  <section class="slide slide--pink" data-waves="pink" data-sparkles="10" id="antes">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner slide-inner--split">
-      <div class="col-text">
-        <p class="kicker reveal">Valdivia, 2023</p>
-        <h2 class="title reveal">Antes de subir</h2>
-        <p class="body reveal">Era mi primera charla presencial. Había preparado todo: la propuesta, las diapositivas, incluso clases de oratoria.</p>
-        <p class="body reveal">Pero por dentro estaba viviendo una de las situaciones personales más difíciles de mi vida. La tristeza no cabía en ninguna slide.</p>
-        <p class="body body--emph reveal">No sabía qué iba a pasar cuando subiera.</p>
+  <!-- 02 -->
+  <section class="slide" id="s02">
+    <div class="inner">
+      <p class="kicker reveal">Para empezar</p>
+      <h2 class="statement reveal">Esta charla es una carta de regreso.</h2>
+      <p class="lead reveal">No es un tutorial de oratoria ni una lista de tips.</p>
+    </div>
+  </section>
+
+  <!-- 03 -->
+  <section class="slide" id="s03">
+    <div class="inner inner--split">
+      <div class="col">
+        <h2 class="statement reveal">Frani era una niña extraña: abrazaba árboles y encontraba un significado profundo en todo.</h2>
       </div>
       <div class="col-media">
-        <div class="asset reveal" data-src="assets/img/2023-antes-del-escenario.jpg" data-label="Foto: backstage o Valdivia 2023, antes de subir"></div>
+        <div class="asset reveal" data-src="assets/img/nina.jpg" data-label="Foto: tú de niña"></div>
       </div>
     </div>
   </section>
 
-  <!-- 2 · LA NIÑA QUE TENÍA MIEDO DE HABLAR -->
-  <section class="slide slide--cream" data-waves="cream" data-sparkles="8" id="la-nina">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner slide-inner--split slide-inner--flip">
-      <div class="col-media">
-        <div class="asset reveal" data-src="assets/img/nina.jpg" data-label="Foto o ilustración: tú de niña"></div>
-      </div>
-      <div class="col-text">
-        <h2 class="title reveal">La niña que tenía<br>miedo de hablar</h2>
-        <p class="body reveal">Crecí tímida. Hubo bullying, la sensación de ser distinta, y muchos años sintiendo que no tenía amigos.</p>
-        <blockquote class="quote reveal">«Solo podía hablar cuando mis palabras fueran más hermosas que el silencio.»</blockquote>
-      </div>
+  <!-- 04 -->
+  <section class="slide" id="s04">
+    <div class="inner">
+      <h2 class="statement reveal">Y solo hablaba cuando consideraba que sus palabras eran <em>más hermosas que el silencio</em>.</h2>
     </div>
   </section>
 
-  <!-- 3 · EL PRIMER MOTIVO -->
-  <section class="slide slide--pink" data-waves="pink" data-sparkles="8" id="primer-motivo">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner slide-inner--center">
-      <p class="kicker reveal">El primer motivo para tomar la palabra</p>
-      <h2 class="title reveal">Mi proyecto de título<br>merecía ser contado</h2>
-      <p class="body reveal">Sabía que era valioso y quería comunicarlo bien. Así llegué a un taller de cuentacuentos, a las habilidades comunicativas, al teatro.</p>
-      <p class="body reveal">En esa presentación sentí comodidad por primera vez. Y durante la pandemia, las charlas online siguieron construyendo esa confianza.</p>
+  <!-- 05 -->
+  <section class="slide" id="s05">
+    <div class="inner">
+      <h2 class="statement reveal">Tuvo un proceso para deshacer ese conjuro y hacerle justicia a su proyecto final de la universidad:</h2>
     </div>
   </section>
 
-  <!-- 4 · LAS COMUNIDADES -->
-  <section class="slide slide--night" data-waves="night" data-sparkles="14" id="tribu">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner slide-inner--split">
-      <div class="col-text">
-        <h2 class="title reveal">Encontrar mi tribu</h2>
-        <p class="body reveal">Para alguien que creció sintiéndose distinta, las comunidades lo cambiaron todo: pertenencia, afinidades, personas con quienes conectar de verdad.</p>
-        <p class="body body--emph reveal">Eso era lo que quería compartir en 2023.</p>
-      </div>
-      <div class="col-media">
-        <div class="asset reveal" data-src="assets/img/comunidad.jpg" data-label="Foto: tu comunidad (Women Techmakers, meetups, etc.)"></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- 5 · ARRIBA DEL ESCENARIO -->
-  <section class="slide slide--night slide--stage" data-waves="night" data-sparkles="22" id="escenario">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner slide-inner--center">
-      <p class="kicker reveal">9punto5, 2023 · Arriba del escenario</p>
-      <h2 class="title reveal">Apareció Franny</h2>
-      <p class="body reveal">Determinada. Segura. Capaz de hacer chistes y de hablar desde la emoción.</p>
-      <p class="body reveal">Sentí <em>flow</em>. Hay partes de esa charla que todavía recuerdo borrosas, como un sueño del que despiertas con el corazón latiendo fuerte.</p>
-      <div class="asset asset--wide reveal" data-src="assets/video/2023-charla.mp4" data-type="video" data-label="Video o foto: tú en el escenario de 9punto5 2023"></div>
-    </div>
-  </section>
-
-  <!-- 6 · LO QUE RECIBISTE AL BAJAR (CENTRO EMOCIONAL) -->
-  <section class="slide slide--cream" data-waves="cream" data-sparkles="8" id="al-bajar">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner slide-inner--center">
-      <h2 class="title reveal">Lo que recibí al bajar</h2>
-      <p class="body reveal">Tres aplausos durante la charla. Abrazos. Personas emocionadas que se acercaban a contarme lo que habían sentido.</p>
-      <blockquote class="quote quote--big reveal">«Quiero que mi hija<br>sea como tú.»<cite>Un papá en la sala</cite></blockquote>
-      <p class="body reveal">Y ahí lo entendí: cuánto me habría servido conocer a una mujer así cuando yo era niña.</p>
-    </div>
-  </section>
-
-  <!-- 7 · LO QUE TE ANIMASTE A HACER -->
-  <section class="slide slide--pink" data-waves="pink" data-sparkles="10" id="despues">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner">
-      <h2 class="title reveal">Lo que me animé a hacer después</h2>
-      <div class="cards">
-        <article class="card reveal">
-          <div class="asset" data-src="assets/img/budapest.jpg" data-label="Foto: JSConf Budapest"></div>
-          <h3>JSConf Budapest</h3>
-          <p>Mi primera conferencia internacional. En inglés.</p>
-        </article>
-        <article class="card reveal">
-          <div class="asset" data-src="assets/img/jsconf-chile.jpg" data-label="Foto: JSConf Chile"></div>
-          <h3>JSConf Chile</h3>
-          <p>Nuevos temas, nuevos formatos, más confianza.</p>
-        </article>
-        <article class="card reveal">
-          <div class="asset" data-src="assets/img/mas-charlas.jpg" data-label="Foto: otra charla o comunidad"></div>
-          <h3>Y más</h3>
-          <p>Postular, ampliar temas, atreverme a presentar en otro idioma.</p>
-        </article>
-      </div>
-    </div>
-  </section>
-
-  <!-- 8 · AUTOEXIGENCIA -->
-  <section class="slide slide--cream" data-waves="cream" data-sparkles="8" id="autoexigencia">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner slide-inner--center">
-      <h2 class="title reveal">Me exigía más<br>que el público</h2>
-      <p class="body reveal">Aplaudieron igual, pese a mis tropiezos con el inglés. Conocí a otros speakers que también se atrevían a presentar sin ser perfectos.</p>
-      <p class="body body--emph reveal">Descubrí que la vara más dura era la mía.</p>
-    </div>
-  </section>
-
-  <!-- 9 · VOLVER HOY: TENER VOZ -->
-  <section class="slide slide--night" data-waves="night" data-sparkles="18" id="voz">
-    <header class="brand"><span class="brand-name">frani<i class="brand-star">✦</i>be</span></header>
-    <div class="slide-inner slide-inner--center">
-      <p class="kicker reveal">Volver hoy</p>
-      <h2 class="title reveal">Qué significa tener voz</h2>
-      <p class="body reveal">Tengo una seguridad que antes no existía. Y la timidez sigue apareciendo en mi vida cotidiana. Las dos cosas conviven.</p>
-      <p class="body reveal">A esa niña le diría: vuelve a empezar, confía en tus capacidades, anímate a ocupar un espacio.</p>
-      <blockquote class="quote quote--big reveal">«Tenemos derecho a hablar.<br>Y existen personas que quieren escucharnos.»</blockquote>
-    </div>
-  </section>
-
-  <!-- 10 · CIERRE / CONTACTO -->
-  <section class="slide slide--night slide--final" data-waves="night" data-sparkles="20" id="cierre">
-    <div class="slide-inner slide-inner--center">
-      <figure class="illustration reveal" aria-hidden="true">
-        <svg viewBox="0 0 320 200" class="art-girl-star">
-          <path class="star-big" d="M238 22 C241 36 248 43 262 46 C248 49 241 56 238 70 C235 56 228 49 214 46 C228 43 235 36 238 22 Z"/>
-          <g class="girl">
-            <path class="girl-hair" d="M118 96 C110 62 132 48 152 50 C176 52 190 70 184 100 C180 122 186 132 178 140 C160 152 128 148 118 132 C112 122 122 116 118 96 Z"/>
-            <circle class="girl-face" cx="152" cy="82" r="20"/>
-            <path class="girl-dress" d="M128 116 C138 108 166 108 176 116 L186 168 C160 178 138 178 116 168 Z"/>
-            <path class="girl-arm" d="M126 122 C114 130 108 142 106 154"/>
-            <path class="girl-arm" d="M178 122 C190 130 196 142 198 154"/>
-            <rect class="girl-leg" x="140" y="168" width="8" height="20" rx="4"/>
-            <rect class="girl-leg" x="156" y="168" width="8" height="20" rx="4"/>
-          </g>
-        </svg>
-      </figure>
-      <h2 class="title title--hero reveal">¿Qué estás esperando<br>para contar lo que te pasó?</h2>
-      <p class="subtitle reveal">Cada historia contada con honestidad puede ser el primer peldaño de otra.</p>
-      <p class="contact reveal"><span class="brand-name brand-name--big">frani<i class="brand-star">✦</i>be</span></p>
-      <ul class="links reveal">
-        <li><a href="https://frani.be">frani.be</a></li>
-        <li><a href="https://github.com/frani-be">github.com/frani-be</a></li>
-        <li><a href="https://www.instagram.com/frani.be">@frani.be</a></li>
-        <li><a href="mailto:hola@frani.be">hola@frani.be</a></li>
+  <!-- 06 -->
+  <section class="slide" id="s06">
+    <div class="inner">
+      <h2 class="statement reveal">Tuvo un proceso para deshacer ese conjuro y hacerle justicia a su proyecto final de la universidad:</h2>
+      <ul class="dots reveal">
+        <li>Salir de la comodidad.</li>
+        <li>Presentar con miedo.</li>
+        <li>Hablar con convicción.</li>
       </ul>
+    </div>
+  </section>
+
+  <!-- 07 · Divisor 01 -->
+  <section class="slide slide--dark" id="s07">
+    <div class="inner inner--split">
+      <div class="col">
+        <p class="numeral reveal">01</p>
+        <h2 class="display display--mid reveal">Valdivia, 2023</h2>
+        <p class="lead reveal">Qué pasó cuando me atreví a ser vulnerable.</p>
+      </div>
+      <div class="col-media">
+        <div class="asset reveal" data-src="assets/img/2023-antes-del-escenario.jpg" data-label="Foto: Valdivia 2023, antes de subir"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 08 -->
+  <section class="slide" id="s08">
+    <div class="inner">
+      <p class="kicker reveal">Lo que se veía</p>
+      <h2 class="title reveal">Desde afuera, todo en orden</h2>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>Una propuesta</h3><p>El poder de las comunidades</p></article>
+        <article class="card reveal"><h3>Mucha preparación</h3><p>Ensayé bastante. Hasta tomé clases de oratoria.</p></article>
+        <article class="card reveal"><h3>Una charlista más</h3><p>En el programa, un nombre y un horario.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 09 -->
+  <section class="slide" id="s09">
+    <div class="inner">
+      <p class="kicker reveal">Lo que no se veía</p>
+      <h2 class="statement reveal">Estaba muy triste.</h2>
+      <h2 class="statement reveal">Y tenía que dar la charla.</h2>
+      <p class="lead reveal">Mi vida personal se estaba derrumbando.</p>
+    </div>
+  </section>
+
+  <!-- 10 -->
+  <section class="slide" id="s10">
+    <div class="inner">
+      <p class="kicker reveal">El precio invisible</p>
+      <h2 class="title reveal">Lo que cargamos en silencio</h2>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>Parecer bien</h3><p>La presión de que todo se vea bajo control.</p></article>
+        <article class="card reveal"><h3>La culpa</h3><p>Sentir que atravesar algo difícil es fallarle al trabajo.</p></article>
+        <article class="card reveal"><h3>El miedo</h3><p>Creer que el dolor resta credibilidad profesional.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 11 -->
+  <section class="slide" id="s11">
+    <div class="inner">
+      <p class="kicker reveal">El momento</p>
+      <h2 class="statement reveal">Pensé en no hacerla.</h2>
+      <h2 class="statement reveal">Subí igual.</h2>
+      <h2 class="statement reveal">Y conocí a una <em>nueva Frani</em>.</h2>
+    </div>
+  </section>
+
+  <!-- 12 -->
+  <section class="slide" id="s12">
+    <div class="inner">
+      <p class="kicker reveal">Dos versiones</p>
+      <h2 class="title reveal">La Frani del escenario y la de todos los días</h2>
+      <div class="cols">
+        <div class="colbox reveal">
+          <h3>En el escenario</h3>
+          <ul class="dots">
+            <li>Habla con determinación</li>
+            <li>Hace chistes</li>
+            <li>Entra en flow, casi en trance</li>
+            <li>Habla desde la emoción sin quebrarse</li>
+          </ul>
+        </div>
+        <div class="colbox reveal">
+          <h3>Fuera de él</h3>
+          <ul class="dots dots--mute">
+            <li>Más tímida</li>
+            <li>Más insegura</li>
+            <li>Menos elocuente</li>
+            <li>Todavía aprendiendo a traer a la otra</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 13 -->
+  <section class="slide" id="s13">
+    <div class="inner">
+      <p class="kicker reveal">En trance</p>
+      <h2 class="statement reveal">No recuerdo bien lo que dije.</h2>
+      <h2 class="statement reveal">Recuerdo <em>cómo se sintió</em>.</h2>
+    </div>
+  </section>
+
+  <!-- 14 -->
+  <section class="slide" id="s14">
+    <div class="inner inner--center">
+      <p class="kicker reveal">Lo que sí recuerdo</p>
+      <p class="bignum reveal">3</p>
+      <h2 class="statement reveal">veces me aplaudieron antes de terminar.</h2>
+    </div>
+  </section>
+
+  <!-- 15 -->
+  <section class="slide" id="s15">
+    <div class="inner">
+      <p class="kicker reveal">Frente a 300 personas</p>
+      <h2 class="title reveal">La armadura se agrietó</h2>
+      <p class="lead reveal">No tenía planeado mostrar tanto.</p>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>Pausa</h3><p>A punto de quebrarme.</p></article>
+        <article class="card reveal"><h3>Mirar a los demás</h3><p>Evaluar el</p></article>
+        <article class="card reveal"><h3>Aplausos</h3><p>En vez de fallar, algo conectó.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 16 -->
+  <section class="slide" id="s16">
+    <div class="inner inner--split">
+      <div class="col">
+        <p class="kicker reveal">Al bajar</p>
+        <h2 class="statement reveal">Lo mejor no fue la charla.</h2>
+        <h2 class="statement reveal">Fueron los <em>abrazos</em>.</h2>
+      </div>
+      <div class="col-media">
+        <div class="asset reveal" data-src="assets/img/abrazos.jpg" data-label="Foto: los abrazos al bajar del escenario"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 17 -->
+  <section class="slide" id="s17">
+    <div class="inner">
+      <p class="kicker reveal">Lo que aprendí de soltar</p>
+      <h2 class="title reveal">Tres cosas que entendí ese día</h2>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>Hablar es conectar</h3><p>Una charla puede ser más que exponer conocimiento.</p></article>
+        <article class="card reveal"><h3>El dolor no restó</h3><p>Mostrarlo no me quitó credibilidad.</p></article>
+        <article class="card reveal"><h3>Una sola persona</h3><p>La profesional y la real pueden ser la misma.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 18 · Divisor 02 -->
+  <section class="slide slide--dark" id="s18">
+    <div class="inner">
+      <p class="numeral reveal">02</p>
+      <h2 class="display display--mid reveal">El efecto mariposa</h2>
+      <p class="lead reveal">Un gesto pequeño, consecuencias que nadie puede predecir.</p>
+    </div>
+  </section>
+
+  <!-- 19 -->
+  <section class="slide" id="s19">
+    <div class="inner">
+      <p class="kicker reveal">La idea</p>
+      <h2 class="title reveal">Un aleteo pequeño puede mover algo enorme</h2>
+      <p class="lead lead--wide reveal">En sistemas complejos, un cambio mínimo al inicio puede terminar en un resultado completamente distinto.</p>
+    </div>
+  </section>
+
+  <!-- 20 -->
+  <section class="slide" id="s20">
+    <div class="inner">
+      <p class="kicker reveal">Antes de mi charla</p>
+      <h2 class="title reveal">Alguien puso el escenario</h2>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>Alguien organizó</h3><p>Personas que levantaron 9punto5 hace 10 años.</p><p class="card-note">Fabián y Felipe</p></article>
+        <article class="card reveal"><h3>Alguien confió</h3><p>Aceptaron mi propuesta.</p></article>
+        <article class="card reveal"><h3>Alguien escuchó</h3><p>Personas en el auditorio.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 21 -->
+  <section class="slide" id="s21">
+    <div class="inner">
+      <p class="kicker reveal">Mi aleteo</p>
+      <h2 class="statement reveal">Una charla de 20 minutos en Valdivia el 2023.</h2>
+    </div>
+  </section>
+
+  <!-- 22 · Timeline -->
+  <section class="slide" id="s22">
+    <div class="inner">
+      <p class="kicker reveal">Tres años</p>
+      <h2 class="title reveal">Lo que vino después</h2>
+      <div class="timeline">
+        <div class="tl-item reveal">
+          <span class="tl-year">2023</span>
+          <p class="tl-label">9punto5, Valdivia</p>
+          <div class="asset asset--sm" data-src="assets/img/2023-escenario.jpg" data-label="Foto: en el escenario 2023"></div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-year">2024</span>
+          <p class="tl-label">JSConf Budapest</p>
+          <div class="asset asset--sm" data-src="assets/img/budapest.jpg" data-label="Foto: JSConf Budapest"></div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-year tl-year--green">2025</span>
+          <p class="tl-label">Abraza a tu impostora</p>
+          <div class="asset asset--sm" data-src="assets/img/impostora.jpg" data-label="Foto o portada: Abraza a tu impostora"></div>
+        </div>
+        <div class="tl-item reveal">
+          <span class="tl-year">2026</span>
+          <p class="tl-label">De vuelta en 9punto5</p>
+          <div class="asset asset--sm" data-src="assets/img/2026-9punto5.jpg" data-label="Foto: 9punto5 2026 (opcional)"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 23 -->
+  <section class="slide" id="s23">
+    <div class="inner">
+      <p class="kicker reveal">Dónde estoy hoy</p>
+      <h2 class="title reveal">Lo que hay ahora</h2>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>Speaker</h3></article>
+        <article class="card reveal"><h3>Docente</h3></article>
+        <article class="card reveal"><h3>Freelancer</h3></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 24 -->
+  <section class="slide" id="s24">
+    <div class="inner">
+      <p class="kicker reveal">La verdad</p>
+      <h2 class="statement reveal">Nada de esto estaba en el plan.</h2>
+    </div>
+  </section>
+
+  <!-- 25 -->
+  <section class="slide" id="s25">
+    <div class="inner">
+      <p class="kicker reveal">El aleteo sigue</p>
+      <h2 class="statement reveal">Lo que esa charla movió en otras personas.</h2>
+    </div>
+  </section>
+
+  <!-- 26 -->
+  <section class="slide" id="s26">
+    <div class="inner">
+      <p class="kicker reveal">Aleteos posibles</p>
+      <h2 class="title reveal">Gestos pequeños que cuentan</h2>
+      <div class="cards cards--4">
+        <article class="card reveal"><h3>Una pregunta</h3><p>Levantar la mano en un meetup.</p></article>
+        <article class="card reveal"><h3>Un “a mí también”</h3><p>Decírselo a quien acaba de contar algo difícil.</p></article>
+        <article class="card reveal"><h3>Un post honesto</h3><p>Escribir lo que pasó, no solo lo que salió bien.</p></article>
+        <article class="card reveal"><h3>Cinco minutos</h3><p>Una primera charla relámpago.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 27 -->
+  <section class="slide" id="s27">
+    <div class="inner">
+      <p class="kicker reveal">Lo que sí depende de ti</p>
+      <h2 class="statement reveal">No puedes calcular el efecto.</h2>
+      <h2 class="statement reveal">Puedes decidir <em>aletear</em>.</h2>
+    </div>
+  </section>
+
+  <!-- 28 · Divisor 03 -->
+  <section class="slide slide--dark" id="s28">
+    <div class="inner">
+      <p class="numeral reveal">03</p>
+      <h2 class="display display--mid reveal">El poder de las comunidades</h2>
+      <p class="lead reveal">Nadie cambia de trayectoria a solas.</p>
+    </div>
+  </section>
+
+  <!-- 29 -->
+  <section class="slide" id="s29">
+    <div class="inner">
+      <p class="kicker reveal">Sin esto no hay efecto</p>
+      <h2 class="statement reveal">Un aleteo necesita aire.</h2>
+      <h2 class="statement reveal">El mío fue una <em>comunidad</em>.</h2>
+    </div>
+  </section>
+
+  <!-- 30 -->
+  <section class="slide" id="s30">
+    <div class="inner inner--split">
+      <div class="col">
+        <p class="paragraph reveal">En muchas comunidades encontré red, pero más allá del nombre de cada una, fueron las personas que estaban ahí, que hasta el día de hoy conservo y las que conoceré en el futuro.</p>
+      </div>
+      <div class="col-media">
+        <div class="asset reveal" data-src="assets/img/comunidad.jpeg" data-label="Foto: tu comunidad"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 31 -->
+  <section class="slide" id="s31">
+    <div class="inner">
+      <p class="kicker reveal">Volviendo a 2023</p>
+      <h2 class="statement reveal">Esos abrazos eran la comunidad.</h2>
+    </div>
+  </section>
+
+  <!-- 32 -->
+  <section class="slide" id="s32">
+    <div class="inner">
+      <p class="kicker reveal">Lo que descubrí</p>
+      <h2 class="statement reveal">Cuando te muestras, la red aparece.</h2>
+      <p class="lead reveal">Mucha gente en tecnología está esperando ese tipo de honestidad.</p>
+    </div>
+  </section>
+
+  <!-- 33 -->
+  <section class="slide" id="s33">
+    <div class="inner">
+      <p class="kicker reveal">De recibir a devolver</p>
+      <h2 class="title reveal">Cómo intento devolverlo</h2>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>En la sala de clases</h3></article>
+        <article class="card reveal"><h3>En comunidad</h3></article>
+        <article class="card reveal"><h3>Hoy, aquí</h3></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 34 -->
+  <section class="slide" id="s34">
+    <div class="inner">
+      <p class="kicker reveal">Desde adentro</p>
+      <h2 class="statement reveal">Enseño inteligencia artificial generativa.</h2>
+      <h2 class="statement reveal">No vengo a hablar en contra de ella.</h2>
+    </div>
+  </section>
+
+  <!-- 35 -->
+  <section class="slide" id="s35">
+    <div class="inner">
+      <p class="kicker reveal">Lo que ya puede hacer</p>
+      <h2 class="title reveal">Una IA puede ayudarte con casi todo esto</h2>
+      <div class="cards cards--4">
+        <article class="card reveal"><h3>Escribir código</h3><p>Y explicarlo.</p></article>
+        <article class="card reveal"><h3>Resumir</h3><p>Documentos, reuniones, hilos.</p></article>
+        <article class="card reveal"><h3>Redactar</h3><p>Un abstract, un guion, una charla entera.</p></article>
+        <article class="card reveal"><h3>Diseñar</h3><p>Hasta las láminas de una presentación.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 36 -->
+  <section class="slide" id="s36">
+    <div class="inner">
+      <p class="kicker reveal">Lo que no puede</p>
+      <h2 class="statement reveal">Una IA puede escribir una charla.</h2>
+      <h2 class="statement reveal">No puede <em>haber estado ahí</em>.</h2>
+    </div>
+  </section>
+
+  <!-- 37 -->
+  <section class="slide" id="s37">
+    <div class="inner">
+      <p class="kicker reveal">Lo que hace una comunidad</p>
+      <h2 class="title reveal">Cuatro cosas que ningún curso entrega, las comunidades sí</h2>
+      <div class="cards cards--4">
+        <article class="card reveal"><h3>Da escenario</h3><p>Un lugar donde probar la voz.</p></article>
+        <article class="card reveal"><h3>Sostiene</h3><p>Abrazos cuando bajas temblando.</p></article>
+        <article class="card reveal"><h3>Abre puertas</h3><p>Una charla lleva a la siguiente.</p></article>
+        <article class="card reveal"><h3>Pide de vuelta</h3><p>Te invita a hacer lo mismo por otra persona.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 38 -->
+  <section class="slide" id="s38">
+    <div class="inner">
+      <p class="kicker reveal">Dónde buscar</p>
+      <h2 class="title reveal">Lo humano está en lo que no se automatiza</h2>
+      <div class="cards cards--4">
+        <article class="card reveal"><h3>Vulnerabilidad</h3><p>Mostrar lo que cuesta.</p></article>
+        <article class="card reveal"><h3>Presencia</h3><p>Estar en la misma sala, con el cuerpo.</p></article>
+        <article class="card reveal"><h3>Comunidad</h3><p>Personas que se eligen y se cuidan.</p></article>
+        <article class="card reveal"><h3>Historia</h3><p>Lo que solo te pasó a ti.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 39 -->
+  <section class="slide" id="s39">
+    <div class="inner">
+      <p class="kicker reveal">Lo que nos frena</p>
+      <h2 class="title reveal">Las barreras de adentro</h2>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>“No es profesional”</h3><p>La idea de que lo personal no cabe en el trabajo.</p></article>
+        <article class="card reveal"><h3>“Me va a restar”</h3><p>El miedo a perder credibilidad.</p></article>
+        <article class="card reveal"><h3>“No es importante”</h3><p>Creer que tu historia no le sirve a nadie.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 40 -->
+  <section class="slide" id="s40">
+    <div class="inner">
+      <p class="kicker reveal">Un miedo menos</p>
+      <h2 class="statement reveal">Humanizar la tecnología no debilita la credibilidad técnica.</h2>
+    </div>
+  </section>
+
+  <!-- 41 · Divisor 05 -->
+  <section class="slide slide--dark" id="s41">
+    <div class="inner">
+      <p class="numeral reveal">05</p>
+      <h2 class="display display--mid reveal">Una invitación</h2>
+      <p class="lead reveal">¿Qué estás esperando para contar lo que te pasó?</p>
+    </div>
+  </section>
+
+  <!-- 42 -->
+  <section class="slide" id="s42">
+    <div class="inner">
+      <p class="kicker reveal">Esta semana</p>
+      <h2 class="title reveal">Tres formas de empezar</h2>
+      <div class="cards cards--3">
+        <article class="card reveal"><h3>Cuéntaselo a alguien</h3><p>Una persona basta para el primer aleteo.</p></article>
+        <article class="card reveal"><h3>Propón una charla</h3><p>Cinco minutos en tu comunidad.</p></article>
+        <article class="card reveal"><h3>Escríbelo</h3><p>Aunque todavía no lo publiques.</p></article>
+      </div>
+    </div>
+  </section>
+
+  <!-- 43 -->
+  <section class="slide" id="s43">
+    <div class="inner">
+      <p class="kicker reveal">Una pregunta para ti</p>
+      <h2 class="statement reveal">¿Quién te dio tu primer escenario?</h2>
+      <h2 class="statement statement--soft reveal">¿Se lo has dicho?</h2>
+    </div>
+  </section>
+
+  <!-- 44 -->
+  <section class="slide" id="s44">
+    <div class="inner">
+      <p class="kicker reveal">Lo que creo</p>
+      <h2 class="statement reveal">Tu historia puede ser el primer escenario de otra persona.</h2>
+    </div>
+  </section>
+
+  <!-- 45 -->
+  <section class="slide" id="s45">
+    <div class="inner">
+      <h2 class="statement reveal">Mis canales están abiertos para que conversemos:</h2>
+      <div class="contact-lines reveal">
+        <p>frani.be</p>
+        <p>hola@frani.be</p>
+        <p>LinkedIn: frani-be · Instagram: frani.be · GitHub: frani-be</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 46 -->
+  <section class="slide slide--dark" id="s46">
+    <div class="inner">
+      <p class="kicker kicker--light reveal">Gracias, 9punto5</p>
+      <h2 class="statement reveal">Aquí empezó todo.</h2>
+      <h2 class="statement reveal">Gracias por el escenario.</h2>
+    </div>
+  </section>
+
+  <!-- 47 -->
+  <section class="slide" id="s47">
+    <div class="inner inner--split">
+      <div class="col-media col-media--portrait">
+        <div class="asset reveal" data-src="assets/img/frani.jpg" data-label="Foto: retrato tuyo"></div>
+      </div>
+      <div class="col">
+        <p class="kicker reveal">Quién habla</p>
+        <h2 class="title reveal">Hola, soy Frani</h2>
+        <div class="cards cards--2">
+          <article class="card reveal"><h3>Código y diseño</h3><p>Desarrolladora front-end y estratega UX.</p></article>
+          <article class="card reveal"><h3>Docente PUC</h3><p>Narración gráfica, IA Generativa y Pensamiento Computacional.</p></article>
+          <article class="card reveal"><h3>Miembro de comunidades</h3></article>
+          <article class="card reveal"><h3>Escenarios</h3><p>Speaker en conferencias nacionales e internacionales.</p><div class="asset asset--xs" data-src="assets/img/jsconf-chile.jpg" data-label="Foto: JSConf Chile"></div></article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 48 -->
+  <section class="slide" id="s48">
+    <div class="inner">
+      <h2 class="statement reveal">Frani es una mujer extraña: abraza árboles y encuentra un significado profundo en todo.</h2>
+    </div>
+  </section>
+
+  <!-- 49 -->
+  <section class="slide" id="s49">
+    <div class="inner">
+      <h2 class="display reveal">Y <em>habla</em>.</h2>
+    </div>
+  </section>
+
+  <!-- 50 -->
+  <section class="slide" id="s50">
+    <div class="inner">
+      <h2 class="statement reveal">Habla con miedo.</h2>
+      <h2 class="statement reveal">Habla con pena.</h2>
+      <h2 class="statement reveal">Habla con felicidad.</h2>
+      <h2 class="statement reveal">Y habla porque <em>sabe</em> que las palabras, apoyadas de intenciones positivas, siempre serán más hermosa que el silencio.</h2>
+    </div>
+  </section>
+
+  <!-- 51 -->
+  <section class="slide slide--dark" id="s51">
+    <div class="inner inner--center">
+      <p class="kicker kicker--light reveal">Sigamos conversando</p>
+      <h2 class="display display--mid reveal">Francisca Medina</h2>
+      <div class="contact-lines reveal">
+        <p>frani.be</p>
+        <p>hola@frani.be</p>
+        <p>LinkedIn: frani-be · Instagram: frani.be · GitHub: frani-be</p>
+      </div>
     </div>
   </section>
 
