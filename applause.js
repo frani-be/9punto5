@@ -126,7 +126,7 @@
       const src = audioCtx.createMediaStreamSource(stream);
       analyser = audioCtx.createAnalyser();
       analyser.fftSize = 512;
-      micData = new Uint8Array(analyser.frequencyBinCount);
+      micData = new Uint8Array(analyser.fftSize);
       src.connect(analyser);
       if (status) status.textContent = "Micrófono activo: el ruido de la sala dibuja el logo.";
       document.getElementById("apMic").textContent = "Micrófono activo";

@@ -1,8 +1,8 @@
-# Volver a subirse al escenario
+# Volver al escenario de 9punto5
 
 Webstory para la charla de Francisca Medina (frani.be) en 9punto5 2026.
 
-51 láminas a pantalla completa, una por cada página del deck `.devin/slides/Volver a subirse al escenario.pptx.pdf`. Los textos son exactamente los del deck. Funciona como sitio navegable y como apoyo proyectable (las flechas del teclado avanzan y retroceden).
+51 láminas a pantalla completa basadas en el deck `.devin/slides/Volver a subirse al escenario.pptx.pdf`. Funciona como sitio navegable y como apoyo proyectable (las flechas del teclado avanzan y retroceden).
 
 ## Cómo verla
 
@@ -25,19 +25,23 @@ y abrir http://localhost:8080
 - Scroll o gesto: avanza lámina por lámina (snap).
 - Flechas ↑ ↓ ← →, espacio, PageUp/PageDown: anterior/siguiente.
 - Barra a la izquierda: progreso. Contador abajo a la izquierda.
+- Logo `frani.be` fijo arriba a la derecha: cambia de color según el fondo y enlaza al sitio.
 
 ## Estética
 
-Minimalista con variantes por lámina: fondo crema, tinta ciruela, kickers malva espaciados, acento verde (guiño a la impostora). Tintes rosa (`slide--blush`) en las láminas emotivas y verde suave (`slide--sage`) en comunidad y cierre. Divisores en ciruela oscuro con ondas y destellos sutiles. Cards con iconos de línea, timeline, doble columna, comilla gigante, líneas en escalera y un ripple animado que representa el efecto mariposa en la lámina 19. QR a frani.be en la lámina final.
+Minimalista con variantes por lámina: crema, tintas rosa (`slide--blush`) y verde (`slide--sage`), divisores y cierres en ciruela oscuro. Acento verde (guiño a *Abraza a tu impostora*) en palabras clave. Cards con iconos de línea, timeline, doble columna, comilla gigante, líneas en escalera, árbol que se mece en las láminas 3 y 48, sparkles mínimos y ondas suaves en las oscuras. Fuentes: Poppins y Quicksand.
 
-Fuentes: Poppins y Quicksand.
+## Piezas interactivas
+
+- **Lámina 19, efecto mariposa:** ripple SVG animado, un punto verde emite anillos que viajan por un camino punteado hacia anillos enormes.
+- **Lámina 30, comunidades:** malla descentralizada animada, nodos conectados entre sí con pulsos que viajan por las conexiones.
+- **Lámina 46, Gracias 9punto5:** `applause.js`, partículas que forman el logo de 9punto5 con la energía del aplauso. Adaptado del sketch de *Infinite Patterns in the Digital Canvas* (JSNation) a canvas vanilla. Micrófono real vía Web Audio, botón de aplausos simulados, o tocar la lámina. El logo se muestrea por píxeles desde `assets/9punto5-logo.svg`.
+- **Lámina 51:** QR a https://frani.be/ en `assets/qr-frani.svg` (regenerable con `qrcode` de Python).
 
 ## Imágenes
 
-Por ahora todas las láminas van sin fotos, para probar el diseño. Cuando quieras reincorporarlas, los assets ya están en `assets/img/` (nina, comunidad, budapest, jsconf-chile, 2023-antes-del-escenario) y se puede reactivar el loader de `script.js` con slots `.asset`.
-
-`assets/qr-frani.svg` es el QR generado a https://frani.be/ (se recrea con `qrcode` de Python si cambia la URL).
+Por ahora todas las láminas van sin fotos, para probar el diseño. Cuando quieras reincorporarlas, los archivos siguen en `assets/img/` (nina, comunidad, budapest, jsconf-chile, 2023-antes-del-escenario).
 
 ## Editar
 
-Todo el copy vive en `index.html`. Clases útiles: `slide--dark`, `slide--blush`, `slide--sage`, `inner--center`, `inner--split`, `statement`, `step`/`step--far` (escalera), `cards--N`, `em` para acento verde, `data-decor` (ondas+destellos), `data-sparkles="n"`.
+Todo el copy vive en `index.html`. Clases útiles: `slide--dark`, `slide--blush`, `slide--sage`, `inner--center`, `inner--split`, `inner--top`, `statement`, `step`/`step--far` (escalera), `cards--N`, `em` para acento verde, `data-decor` (ondas + destellos en oscuras), `data-sparkles="n"`.
