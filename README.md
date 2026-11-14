@@ -2,7 +2,7 @@
 
 Webstory para la charla de Francisca Medina (frani.be) en 9punto5 2026.
 
-51 láminas a pantalla completa basadas en el deck `.devin/slides/Volver a subirse al escenario.pptx.pdf`. Funciona como sitio navegable y como apoyo proyectable (las flechas del teclado avanzan y retroceden).
+50 láminas a pantalla completa basadas en el deck `.devin/slides/Volver a subirse al escenario.pptx.pdf`. Funciona como sitio navegable y como apoyo proyectable (las flechas del teclado avanzan y retroceden).
 
 ## Cómo verla
 
@@ -35,8 +35,7 @@ Minimalista con variantes por lámina: crema, tintas rosa (`slide--blush`) y ver
 
 - **Lámina 19, efecto mariposa:** ripple SVG animado, un punto verde emite anillos que viajan por un camino punteado hacia anillos enormes.
 - **Lámina 30, comunidades:** malla descentralizada animada, 14 nodos conectados entre sí sin centro.
-- **Lámina 51, Gracias 9punto5:** `applause.js`, partículas que forman el logo de 9punto5 con la energía del aplauso. Adaptado del sketch de *Infinite Patterns in the Digital Canvas* (JSNation) a canvas vanilla. Micrófono real vía Web Audio, botón de aplausos simulados, o tocar la lámina. El logo se muestrea por píxeles desde `assets/9punto5-logo.svg`.
-- **Lámina 52 (final):** QR a https://frani.be/ en `assets/qr-frani.svg` (regenerable con `qrcode` de Python).
+- **Lámina 50 (final), Gracias 9punto5:** `applause.js`, partículas que forman el logo de 9punto5 con la energía del aplauso. Adaptado del sketch de *Infinite Patterns in the Digital Canvas* (JSNation) a p5.js + p5.sound. Micrófono real, botón de aplausos simulados, o tocar la lámina. El logo se muestrea por píxeles desde `assets/9punto5-logo.svg`. QR a https://frani.be/ en la esquina inferior derecha (`assets/qr-frani.svg`, regenerable con `qrcode` de Python).
 
 ## Imágenes
 
