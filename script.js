@@ -70,6 +70,7 @@ function buildSparkles(slide, index) {
 /* ---------- Reveal + progreso ---------- */
 
 let current = 0;
+const logo = document.getElementById("siteLogo");
 
 const observer = new IntersectionObserver(
   (entries) => {
@@ -80,6 +81,7 @@ const observer = new IntersectionObserver(
       current = i;
       counterCurrent.textContent = String(i + 1).padStart(2, "0");
       barFill.style.height = `${((i + 1) / slides.length) * 100}%`;
+      if (logo) logo.classList.toggle("logo--on-dark", e.target.classList.contains("slide--dark"));
     });
   },
   { root: story, threshold: 0.55 }

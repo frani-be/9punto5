@@ -190,48 +190,51 @@ body {
 .colbox h3 .ic { width: 34px; height: 34px; border-radius: 10px; margin-right: 0.6rem; vertical-align: -9px; }
 .colbox h3 .ic svg { width: 18px; height: 18px; }
 
-/* ---------- Hub animado (red/comunidad) ---------- */
+/* ---------- Malla animada (red/comunidad, descentralizada) ---------- */
 
-.hub { width: clamp(110px, 13vw, 150px); height: auto; overflow: visible; }
-.hub-spokes line {
-  stroke: var(--green);
-  stroke-width: 2;
-  stroke-linecap: round;
-  stroke-dasharray: 3 7;
-  animation: spokeflow 1.6s linear infinite;
-}
-.hub-spokes line:nth-child(2n) { animation-delay: -0.4s; }
-.hub-spokes line:nth-child(3n) { animation-delay: -0.8s; }
-.hub-center { fill: var(--green); }
-.hub-pulse {
-  fill: none;
+.mesh { width: clamp(180px, 24vw, 300px); height: auto; overflow: visible; }
+.mesh-edges line {
   stroke: var(--green);
   stroke-width: 1.6;
-  transform-box: fill-box;
-  transform-origin: center;
-  animation: hubpulse 2.4s ease-out infinite;
+  stroke-linecap: round;
+  opacity: 0.55;
+  stroke-dasharray: 3 7;
+  animation: spokeflow 1.8s linear infinite;
 }
-.hub-nodes circle {
+.mesh-edges line:nth-child(2n) { animation-delay: -0.4s; }
+.mesh-edges line:nth-child(3n) { animation-delay: -0.9s; }
+.mesh-edges line:nth-child(5n) { animation-delay: -1.3s; }
+.mesh-nodes circle {
   fill: var(--green);
   transform-box: fill-box;
   transform-origin: center;
-  animation: nodepop 2.4s ease-in-out infinite;
+  animation: nodepop 2.8s ease-in-out infinite;
 }
-.hub-nodes circle:nth-child(2) { animation-delay: 0.3s; }
-.hub-nodes circle:nth-child(3) { animation-delay: 0.6s; }
-.hub-nodes circle:nth-child(4) { animation-delay: 0.9s; }
-.hub-nodes circle:nth-child(5) { animation-delay: 1.2s; }
-.hub-nodes circle:nth-child(6) { animation-delay: 1.5s; }
-.hub-nodes circle:nth-child(7) { animation-delay: 1.8s; }
-.hub-nodes circle:nth-child(8) { animation-delay: 2.1s; }
+.mesh-nodes circle:nth-child(2) { animation-delay: 0.3s; }
+.mesh-nodes circle:nth-child(3) { animation-delay: 0.6s; }
+.mesh-nodes circle:nth-child(4) { animation-delay: 0.9s; }
+.mesh-nodes circle:nth-child(5) { animation-delay: 1.2s; }
+.mesh-nodes circle:nth-child(6) { animation-delay: 1.5s; }
+.mesh-nodes circle:nth-child(7) { animation-delay: 1.8s; }
+.mesh-nodes circle:nth-child(8) { animation-delay: 2.1s; }
+.mesh-nodes circle:nth-child(9) { animation-delay: 2.4s; }
+.mesh-nodes circle:nth-child(10) { animation-delay: 2.7s; }
+.mesh-traveler { fill: var(--pink); opacity: 0.9; }
 @keyframes spokeflow { to { stroke-dashoffset: -10; } }
-@keyframes hubpulse {
-  0% { transform: scale(0.6); opacity: 0.9; }
-  100% { transform: scale(3.4); opacity: 0; }
-}
 @keyframes nodepop {
   0%, 100% { transform: scale(1); opacity: 0.85; }
-  50% { transform: scale(1.35); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 1; }
+}
+
+/* ---------- Vaivén del árbol ---------- */
+
+.col-icon .bigicon {
+  transform-origin: 50% 100%;
+  animation: sway 4.5s ease-in-out infinite;
+}
+@keyframes sway {
+  0%, 100% { transform: rotate(-1.8deg); }
+  50% { transform: rotate(1.8deg); }
 }
 
 /* ---------- Lists ---------- */
@@ -433,6 +436,82 @@ body {
 }
 .counter-sep { opacity: 0.5; margin: 0 0.25em; }
 
+/* ---------- Logo fijo ---------- */
+
+.logo {
+  position: fixed;
+  top: 1.6rem;
+  right: 1.8rem;
+  z-index: 40;
+  width: clamp(96px, 9vw, 128px);
+  color: var(--mauve);
+  transition: color 0.4s ease, opacity 0.3s ease;
+  opacity: 0.9;
+}
+.logo:hover { opacity: 1; }
+.logo svg { width: 100%; height: auto; display: block; }
+.logo path { fill: currentColor; }
+.logo--on-dark { color: var(--pink); }
+
+/* ---------- Aplausos -> logo (slide 46) ---------- */
+
+.applause-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+.inner--top { justify-content: flex-start; padding-top: 9vh; }
+.applause-ui {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.9rem;
+  margin-top: 1rem;
+}
+.abtn {
+  font-family: var(--font-title);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.04em;
+  color: #fffaf7;
+  background: var(--green);
+  border: 0;
+  border-radius: 999px;
+  padding: 0.65rem 1.3rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.2s;
+}
+.abtn:hover { transform: translateY(-2px); background: #6fae8d; }
+.abtn--ghost {
+  background: transparent;
+  border: 1.5px solid rgba(255, 250, 247, 0.4);
+}
+.abtn--ghost:hover { border-color: var(--pink); color: var(--pink); }
+.ap-meter {
+  width: 110px;
+  height: 4px;
+  border-radius: 4px;
+  background: rgba(255, 250, 247, 0.15);
+  overflow: hidden;
+  display: inline-block;
+}
+.ap-meter i {
+  display: block;
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--pink), var(--green-light));
+  transition: width 0.15s ease;
+}
+.ap-status {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255, 250, 247, 0.55);
+  width: 100%;
+}
+
 /* ---------- Reveal ---------- */
 
 .reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.7s ease, transform 0.7s ease; }
@@ -470,5 +549,5 @@ body {
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
   .reveal { transition: none; opacity: 1; transform: none; }
-  .bar span, .sparkle, .ripple-path, .hub-spokes line, .hub-pulse, .hub-nodes circle { transition: none; animation: none; }
+  .bar span, .sparkle, .ripple-path, .mesh-edges line, .mesh-nodes circle, .col-icon .bigicon { transition: none; animation: none; }
 }
