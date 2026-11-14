@@ -141,11 +141,11 @@
       if (ready && mic) { try { raw = mic.getLevel(); } catch (e) { raw = 0; } }
       simulated *= 0.965;
       smoothLevel = p.lerp(smoothLevel, Math.max(raw * 5, simulated), 0.12);
-      const e = Math.max(p.constrain(smoothLevel, 0, 1), armed ? 0.3 : 0);
+      const e = Math.max(p.constrain(smoothLevel, 0, 1), armed ? 0.12 : 0);
       if (meter) meter.style.width = `${e * 100}%`;
 
-      /* mientras mas fuerte el aplauso, mas firme el logo */
-      const k = 0.06 + e * 2.6;
+      /* mientras mas fuerte el aplauso, mas firme el logo; sin aplauso vagabunden libres y lejos */
+      const k = 0.05 + e * 2.8;
       const wander = 1 - e;
       for (const pt of parts) {
         const na = p.noise(pt.x * 0.002, pt.y * 0.002, p.frameCount * 0.0008) * p.TAU * 3;
@@ -154,8 +154,8 @@
         pt.vx *= 0.82;
         pt.vy *= 0.82;
         const ox = pt.x, oy = pt.y;
-        pt.x += pt.vx + Math.cos(na) * 1.4 * wander;
-        pt.y += pt.vy + Math.sin(na) * 1.4 * wander;
+        pt.x += pt.vx + Math.cos(na) * 3.2 * wander;
+        pt.y += pt.vy + Math.sin(na) * 3.2 * wander;
         p.stroke(pt.col[0], pt.col[1], pt.col[2], 22 + e * 78);
         p.strokeWeight(0.7 + e * 1.9);
         p.line(ox, oy, pt.x, pt.y);
@@ -192,9 +192,9 @@
           p.loop();
           if (!armed) {
             armed = true;
-            setTimeout(applaud, 350);
-            setTimeout(applaud, 950);
-            setTimeout(applaud, 1600);
+            setTimeout(applaud, 1400);
+            setTimeout(applaud, 2400);
+            setTimeout(applaud, 3400);
           }
         } else {
           p.noLoop();
